@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/masonParentView"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <include
+        android:id="@+id/toolbar_title"
+        layout="@layout/mason_toolbar_title" />
+
+
+    <com.mason.sample.masonhealth.view.ItemView
+        android:id="@+id/health_rate"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar_title"
+        android:background="@color/black_nontransparent"
+        app:icon="@drawable/ic_heart_rate"
+        app:title="@string/heart_rate" />
+
+    <com.mason.sample.masonhealth.view.ItemView
+        android:id="@+id/breathing_rate"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/health_rate"
+        android:layout_marginTop="8dp"
+        android:background="@color/black_nontransparent"
+        app:icon="@drawable/ic_breathing"
+        app:title="@string/breathing_rate" />
+
+    <com.mason.sample.masonhealth.view.ItemView
+        android:id="@+id/blood_oxygen"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/breathing_rate"
+        android:layout_marginTop="8dp"
+        android:background="@color/black_nontransparent"
+        app:icon="@drawable/ic_blood_oxygen"
+        app:title="@string/blood_oxygen" />
+
+</RelativeLayout>

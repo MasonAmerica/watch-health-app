@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">Health</string>
+    <string name="heart_rate">Heart rate</string>
+    <string name="breathing_rate">Breathing rate</string>
+    <string name="blood_oxygen">Blood oxygen</string>
+    <string name="measure">Measure</string>
+    <string name="num_percent">%1$s %%</string>
+    <string name="breathing_rate_unit">RR</string>
+    <string name="heart_rate_unit">BPM</string>
+    <string name="measuring">Measuring…</string>
+    <string name="done">Done</string>
+    <string name="measuring_desc">Make sure to wear the watch securely to your wrist and hold still.</string>
+    <string name="heart_rate_moderate_desc">Your heart rate is in the moderate zone.</string>
+    <string name="heart_rate_light_desc">Your heart rate is in the light zone.</string>
+    <string name="heart_rate_very_light_desc">Your heart rate is in the very light zone.</string>
+    <string name="heart_rate_hard_desc">Your heart rate is in the hard zone.</string>
+    <string name="heart_rate_max_desc">Your heart rate is in the maximum zone.</string>
+    <string name="heart_rate_normal_desc">Your heart rate is in the normal resting zone.</string>
+    <string name="breathing_rate_desc">Your breathing rate is in normal resting zone 12–16.</string>
+    <string name="blood_oxygen_desc">Normal pulse oximeter range from 95–100%.</string>
+    <string name="proximity_error_message">We’re having trouble sensing your wrist. Make sure to wear the watch securely to your wrist and hold still.</string>
+    <string name="error_message">Couldn\'t measure your %1$s %2$s.</string>
+    <string name="rate">rate</string>
+    <string name="heart">heart</string>
+    <string name="breathing">breathing</string>
+    <string name="blood">blood</string>
+    <string name="oxygen">oxygen</string>
+    <string name="try_again">Try again</string>
+    <string name="cancel">Cancel</string>
+    <string name="in_progress">Coming Soon…</string>
+    <string name="just_now">Just now</string>
+    <string name="seconds_ago">%1$d seconds ago</string>
+    <string name="minute_ago">%1$d minute ago</string>
+    <string name="hours_ago">%1$d hour ago</string>
+    <string name="days_ago">%1$d days ago</string>
+    <string name="yesterday">yesterday</string>
+</resources>

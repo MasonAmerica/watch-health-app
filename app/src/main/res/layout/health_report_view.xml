@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/icon"
+        style="@style/masonListImage"
+        android:layout_width="88dp"
+        android:layout_height="88dp"
+        android:layout_centerHorizontal="true"
+        tools:src="@drawable/ic_breathing" />
+
+    <TextView
+        android:id="@+id/label"
+        style="@style/masonTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/icon"
+        android:layout_centerHorizontal="true"
+        android:minWidth="100sp"
+        android:gravity="center"
+        android:textSize="54sp"
+        tools:text="112" />
+
+    <TextView
+        android:id="@+id/unit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/label"
+        android:layout_toEndOf="@id/label"
+        android:textColor="@color/fresh_gray"
+        android:textSize="28sp"
+        tools:text="RR" />
+</RelativeLayout>

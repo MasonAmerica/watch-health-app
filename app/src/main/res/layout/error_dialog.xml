@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:background="@color/black_nontransparent"
+    android:fillViewport="true"
+    android:scrollbarThumbVertical="@drawable/scrollbar_vertical_thumb">
+
+    <RelativeLayout
+        style="@style/masonParentView">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_gravity="center_vertical"
+            style="@style/masonHeader"
+            android:text=""
+            tools:text="Title Title Title Title Title "/>
+
+        <ImageView
+            android:id="@+id/error_icon"
+            style="@style/masonListImage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/title"
+            android:layout_centerHorizontal="true"
+            tools:src="@drawable/ic_proximity_error" />
+
+        <TextView
+            android:id="@+id/error_desc"
+            style="@style/masonSubText"
+            android:layout_below="@id/error_icon"
+            android:layout_centerHorizontal="true"
+            android:paddingTop="8dp"
+            android:gravity="center"
+            android:textColor="@color/fresh_gray"
+            tools:text="@string/proximity_error_message" />
+
+        <Button
+            android:id="@+id/try_again"
+            style="@style/ProvisionButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/error_desc"
+            android:layout_gravity="center_vertical|center"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/shape_pill_grey_button"
+            android:backgroundTint="@color/red"
+            android:text="@string/try_again" />
+
+        <Button
+            android:id="@+id/cancel"
+            style="@style/ProvisionButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/try_again"
+            android:layout_gravity="center_vertical|center"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/shape_pill_grey_button"
+            android:text="@string/cancel" />
+    </RelativeLayout>
+</ScrollView>
