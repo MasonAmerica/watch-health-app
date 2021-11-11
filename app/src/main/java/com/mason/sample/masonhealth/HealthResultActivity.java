@@ -43,7 +43,7 @@ public class HealthResultActivity extends Activity {
             case HEART_RATE: {
                 titleText.setText(R.string.heart_rate);
                 icon.setImageResource(R.drawable.ic_heart_rate);
-                icon.setColorFilter(getResources().getColor(R.color.title_text), android.graphics.PorterDuff.Mode.SRC_IN);
+                icon.setColorFilter(getResources().getColor(R.color.mason_title_text), android.graphics.PorterDuff.Mode.SRC_IN);
                 long heartRate = SharedPrefs.getLong(this, SharedPrefs.KEY_SHARED_HEART_RATE);
                 result.setText(Long.toString(heartRate));
                 unit.setText(getString(R.string.heart_rate_unit));
@@ -53,7 +53,7 @@ public class HealthResultActivity extends Activity {
             case BREATHING_RATE: {
                 titleText.setText(R.string.breathing_rate);
                 icon.setImageResource(R.drawable.ic_breathing);
-                icon.setColorFilter(getResources().getColor(R.color.title_text), android.graphics.PorterDuff.Mode.SRC_IN);
+                icon.setColorFilter(getResources().getColor(R.color.mason_title_text), android.graphics.PorterDuff.Mode.SRC_IN);
                 long breathingRate = SharedPrefs.getLong(this, SharedPrefs.KEY_SHARED_BREATHING_RATE);
                 result.setText(Long.toString(breathingRate));
                 unit.setText(getString(R.string.breathing_rate_unit));

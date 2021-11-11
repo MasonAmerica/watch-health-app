@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:background="@color/black_nontransparent"
     android:fillViewport="true"
-    android:scrollbarThumbVertical="@drawable/scrollbar_vertical_thumb">
+    android:scrollbarThumbVertical="@drawable/mason_scrollbar_vertical_thumb">
 
     <RelativeLayout
         style="@style/masonParentView"
@@ -31,7 +31,7 @@
             android:layout_below="@id/health_report"
             android:gravity="center"
             android:paddingTop="12dp"
-            android:textColor="@color/fresh_gray"
+            android:textColor="@color/mason_fresh_gray"
             tools:text="Your heart rate is in the moderate zone." />
 
         <Button

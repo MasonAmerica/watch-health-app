@@ -35,7 +35,7 @@ public class HealthHomeActivity extends Activity {
             case HEART_RATE: {
                 MasonUtil.setupTitleHeader(this, R.string.heart_rate);
                 icon.setImageResource(R.drawable.ic_heart_rate);
-                icon.setColorFilter(getResources().getColor(R.color.title_text), android.graphics.PorterDuff.Mode.SRC_IN);
+                icon.setColorFilter(getResources().getColor(R.color.mason_title_text), android.graphics.PorterDuff.Mode.SRC_IN);
                 long heartRate = SharedPrefs.getLong(this, SharedPrefs.KEY_SHARED_HEART_RATE);
                 if (heartRate > 0) {
                     readingValue.setText(Long.toString(heartRate));
@@ -48,7 +48,7 @@ public class HealthHomeActivity extends Activity {
             case BREATHING_RATE: {
                 MasonUtil.setupTitleHeader(this, R.string.breathing_rate);
                 icon.setImageResource(R.drawable.ic_breathing);
-                icon.setColorFilter(getResources().getColor(R.color.title_text), android.graphics.PorterDuff.Mode.SRC_IN);
+                icon.setColorFilter(getResources().getColor(R.color.mason_title_text), android.graphics.PorterDuff.Mode.SRC_IN);
                 long breathingRate = SharedPrefs.getLong(this, SharedPrefs.KEY_SHARED_BREATHING_RATE);
                 if (breathingRate > 0) {
                     readingValue.setText(Long.toString(breathingRate));

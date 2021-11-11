@@ -1,6 +1,27 @@
 ---
 image: androidsdk/android-30
 
+.gerrit_setup: &gerrit_setup
+  - mkdir ~/.ssh
+  - echo "$GERRIT_TOKEN" | base64 --decode > ~/.ssh/id_rsa
+  - chmod 600 ~/.ssh/id_rsa
+  - ssh-keyscan -p 29418 -H gerrit.bymason.com > ~/.ssh/known_hosts
+  - ssh-keyscan -p 29418 -H 172.31.16.90 >> ~/.ssh/known_hosts
+  - ssh-keyscan -p 29418 -H 172.31.92.156 >> ~/.ssh/known_hosts
+  - git config --global user.email "gitlab-ci@bymason.com"
+  - git config --global user.name "GitLab CI"
+
+stages:
+  - sync
+  - build
+
+sync:
+  stage: sync
+  before_script:
+    - *gerrit_setup
+  script:
+    - git clone --depth 1 --single-branch --branch 	mason-8.1w ssh://gitlab-ci@gerrit.bymason.com:29418/android_packages_mason_libs  ../android_packages_mason_libs
+
 build:
   stage: build
   script:

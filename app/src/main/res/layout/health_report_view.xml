@@ -31,7 +31,7 @@
         android:layout_height="wrap_content"
         android:layout_alignBaseline="@id/label"
         android:layout_toEndOf="@id/label"
-        android:textColor="@color/fresh_gray"
+        android:textColor="@color/mason_fresh_gray"
         android:textSize="28sp"
         tools:text="RR" />
 </RelativeLayout>

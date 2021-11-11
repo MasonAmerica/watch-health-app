@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:background="@color/black_nontransparent"
     android:fillViewport="true"
-    android:scrollbarThumbVertical="@drawable/scrollbar_vertical_thumb">
+    android:scrollbarThumbVertical="@drawable/mason_scrollbar_vertical_thumb">
 
     <RelativeLayout
         style="@style/masonParentView"
@@ -42,19 +42,7 @@
             android:layout_marginTop="6dp"
             android:layout_centerHorizontal="true"
             android:gravity="center"
-            android:textColor="@color/fresh_gray"
+            android:textColor="@color/mason_fresh_gray"
             android:text="@string/measuring_desc" />
-
-<!--        <Button-->
-<!--            android:id="@+id/done_test_error"-->
-<!--            style="@style/ProvisionButton"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_below="@id/desc"-->
-<!--            android:layout_gravity="center_vertical|center"-->
-<!--            android:layout_marginTop="24dp"-->
-<!--            android:enabled="true"-->
-<!--            android:background="@drawable/shape_pill_grey_button"-->
-<!--            android:text="Test error" />-->
     </RelativeLayout>
 </ScrollView>

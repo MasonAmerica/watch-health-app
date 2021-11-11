@@ -6,8 +6,6 @@ dependencyResolutionManagement {
         jcenter() // Warning: this repository is going to shut down soon
     }
 }
-rootProject.name = "masonhealth"
-include ':app'
-include ':mason_ui'
-project(':mason_ui').projectDir = new File(settingsDir, '../../android_packages_mason_libs/mason_ui')
+include ':app',':mason_ui'
+project(':mason_ui').projectDir = new File(settingsDir, '../android_packages_mason_libs/mason_ui')
 
