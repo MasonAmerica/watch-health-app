@@ -1,4 +1,3 @@
 # Ignore 
 build/
 local.properties
-gradle/
