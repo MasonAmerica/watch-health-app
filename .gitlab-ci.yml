@@ -21,8 +21,7 @@ sync:
   before_script:
     - *gerrit_setup
   script:
-    - git clone --depth 1 --single-branch --branch mason-7.1 ssh://gitlab-ci@gerrit.bymason.com:29418/masonamerica/android_vendor_mason_prebuilts
-   # - git clone --depth 1 --single-branch --branch mason-8.1w ssh://gitlab-ci@gerrit.bymason.com:29418/android_packages_mason_libs  ../android_packages_mason_libs
+    - git clone --depth 1 --single-branch --branch mason-8.1w ssh://gitlab-ci@gerrit.bymason.com:29418/android_packages_mason_libs  ../android_packages_mason_libs
 
 build:
   stage: build
