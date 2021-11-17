@@ -20,6 +20,6 @@ git clone https://github.com/MasonAmerica/watch-health-app.git
 
  Now that you have cloned the repo:
 
-  open the project up in Android Studio 
-  connect the watch and Run the application
-  it will show Health icon on App launcher screen
+  open the project up in Android Studio.
+  connect the watch and Run the application.
+  Health icon on App launcher screen.
