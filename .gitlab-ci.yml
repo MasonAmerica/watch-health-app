@@ -1,8 +1,8 @@
 ---
 image: androidsdk/android-30
-#variables:
-#  CI_DEBUG_TRACE: "true"
-#
+variables:
+  CI_DEBUG_TRACE: "true"
+
 #.gerrit_setup: &gerrit_setup
 #  - mkdir ~/.ssh
 #  - echo "$GERRIT_TOKEN" | base64 --decode > ~/.ssh/id_rsa
