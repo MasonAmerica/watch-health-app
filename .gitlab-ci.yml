@@ -10,7 +10,7 @@ deploy:
     - git checkout -b public
     - git rebase origin/master
     #- git push github $CI_COMMIT_TAG
-    - git push -u github/master public --force
+    - git push -u github public:master --force
   only:
     refs:
       - tags
