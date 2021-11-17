@@ -1,5 +1,5 @@
 ---
-#image: androidsdk/android-30
+image: androidsdk/android-30
 #variables:
 #  CI_DEBUG_TRACE: "true"
 #
@@ -38,7 +38,6 @@ stages:
   - deploy
 deploy:
   stage: deploy
-  image: alpine:latest
   script:
     - git remote add github https://$GITHUB_USERNAME:$GITHUB_TOKEN@github.com/MasonAmerica/watch-health-app.git
     - git fetch origin
