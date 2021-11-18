@@ -7,7 +7,7 @@ deploy:
   script:
     - git remote add github https://$GITHUB_USERNAME:$GITHUB_TOKEN@github.com/MasonAmerica/watch-health-app.git
     - git fetch origin
-    - git checkout -b origin/public
+    - git checkout -b public origin/public
     - git rebase origin/master
     #- echo .gitlab-ci.yml >>.gitignore
    # - git push -u github public:master --force
