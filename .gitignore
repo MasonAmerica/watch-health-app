@@ -1,6 +1,0 @@
-# Ignore 
-build/
-local.properties
-.gradle/
-.idea/
-.gitlab-ci.yml
