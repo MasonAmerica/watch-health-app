@@ -47,6 +47,7 @@ public class HealthProcessActivity extends Activity implements SensorEventListen
     private static final int qSensorTypeBase = 33171000;
 
     private static final int sensorTypeRespiratory = qSensorTypeBase + 5;
+    private static final int sensorTypeSpo2 = qSensorTypeBase + 6;
     private SensorEventListener sensorListener;
 
     @Override
@@ -78,6 +79,7 @@ public class HealthProcessActivity extends Activity implements SensorEventListen
                 break;
             }
             case BLOOD_OXYGEN: {
+                sensor = sensorManager.getDefaultSensor(sensorTypeSpo2);
                 MasonUtil.setupTitleHeader(this, R.string.blood_oxygen);
                 break;
             }
@@ -129,7 +131,7 @@ public class HealthProcessActivity extends Activity implements SensorEventListen
 
             case BREATHING_RATE: {
                 if (event.sensor.getType() == Sensor.TYPE_LOW_LATENCY_OFFBODY_DETECT) {
-                    Log.d("Heart Rate off body", "TYPE_LOW_LATENCY_OFF_BODY_DETECT event has changed" + event.values[0]);
+                    Log.d("Breathing Rate off body", "TYPE_LOW_LATENCY_OFF_BODY_DETECT event has changed" + event.values[0]);
                     if (event.values[0] == 0) {
                         showErrorDialog(true);
                     }
@@ -138,7 +140,7 @@ public class HealthProcessActivity extends Activity implements SensorEventListen
                 if (event.sensor.getType() == sensorTypeRespiratory) {
                     Log.d("Breathing Rate", "Breathing Rate event has changed to event." + event.values[1]);
                     float breathingRateFloat = event.values[1];
-                    int values = Math.round(breathingRateFloat);
+                    int values = Math.round(breathingRateFloat/4);
                     if (values > 0) {
                         invokeActivity(values);
                     }
@@ -148,7 +150,24 @@ public class HealthProcessActivity extends Activity implements SensorEventListen
                 break;
             }
             case BLOOD_OXYGEN: {
-                //To do Integrate with SP02 sensor
+                if (event.sensor.getType() == Sensor.TYPE_LOW_LATENCY_OFFBODY_DETECT) {
+                    Log.d("Blood oxygen off body", "TYPE_LOW_LATENCY_OFF_BODY_DETECT event has changed" + event.values[0]);
+                    if (event.values[0] == 0) {
+                        showErrorDialog(true);
+                    }
+                    break;
+                }
+                if (event.sensor.getType() == sensorTypeSpo2) {
+                    Log.d("Blood oxygen", "Blood oxygen event has changed to event." + event.values[1]);
+                    float bloodOxygenFloat = event.values[1];
+                    int values = Math.round(bloodOxygenFloat);
+                    if (values > 0) {
+                        invokeActivity(values);
+                    }
+                } else {
+                    showErrorDialog(false);
+                }
+                break;
             }
         }
     }
